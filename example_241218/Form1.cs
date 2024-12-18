@@ -20,8 +20,8 @@ namespace example_241218
             int x = 26;
             int y = 3;
             int[] result = DivisionQuotientRemain(x, y);
-            textBoxResult.Text = result[0].ToString();
-            textBoxResult.Text += result[1].ToString();
+            textBoxResult.Text = "몫: " + result[0].ToString() +"\r\n";
+            textBoxResult.Text += "나머지: " + result[1].ToString();
 
         }
 
