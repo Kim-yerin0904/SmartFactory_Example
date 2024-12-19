@@ -19,7 +19,7 @@ namespace example_241219
         {
             InitializeComponent();
         }
-        public enum sevenDays
+        enum sevenDays
         {
             월요일,
             화요일,
