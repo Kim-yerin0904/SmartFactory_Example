@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
 using System.Linq;
-using System.Runtime.Remoting.Metadata.W3cXsd2001;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace example_241219
@@ -35,6 +27,15 @@ namespace example_241219
             if (days.Contains(textBoxInput.Text))
             {
                 string day = textBoxInput.Text;
+                // tryparse 사용법
+                //if (Enum.TryParse(day,true,out sevenDays))
+                //{
+                //    //
+                //}
+                //else
+                //{
+                //    // tryparse니까 안될 경우를 생각해야함
+                //}
                 sevenDays dayenum = (sevenDays)Enum.Parse(typeof(sevenDays), day);
                 switch (dayenum)
                 {
@@ -65,7 +66,7 @@ namespace example_241219
             {
                 textBoxResult.Text = "요일만 입력해주세요! ex.수요일";
             }
-                
+
         }
     }
 }
