@@ -73,8 +73,12 @@ namespace example_241220
         private void DataGridViewToCSV(string fileName, DataGridView dgview, bool header)
         {
             string delimiter = ","; //구분자
-            FileStream fs = new FileStream(fileName, System.IO.FileMode.Create, System.IO.FileAccess.Write);
-            StreamWriter csvExport = new StreamWriter(fs, System.Text.Encoding.UTF8);
+
+            //파일읽기 쓰기 방법
+            //FileMode.Creat : 새 파일 생성
+            //FileAccess.Write : 파일 쓰기 권한
+            FileStream fs = new FileStream(fileName, FileMode.Create, FileAccess.Write);
+            StreamWriter csvExport = new StreamWriter(fs, Encoding.UTF8);
 
             if (dgview.Rows.Count == 0) return;
 
