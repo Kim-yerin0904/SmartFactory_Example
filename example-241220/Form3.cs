@@ -36,6 +36,7 @@ namespace example_241220
                     i++;
                 }
             }
+            int conlict;
         }
     }
 }
