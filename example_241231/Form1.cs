@@ -84,10 +84,13 @@ namespace example_241231
             {
                 MessageBox.Show("몬스터가 죽었습니다!");
                 monster = new Slime();
+                monster_label.Text = "슬라임";
+                monster_strength_label.Text = monster.showstrength();
+
                 player = new Warrior();
                 player_label.Text = player.showName();
                 player_strength.Text = player.showstrength();
-                monster_strength_label.Text = monster.showstrength();
+                
             }
                 
             
