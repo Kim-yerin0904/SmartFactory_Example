@@ -34,12 +34,12 @@ namespace example_241231
             if (int.Parse(monster_strength_label.Text) > 0 && int.Parse(player_strength.Text) > 0)
             {
                 // player공격
-                if (rand.Next(1, 6) == 3 && player_label.Text[0] == '마')
+                if (rand.Next(1,4) == 2 && player_label.Text[0] == '마')
                 {
                     userattack = ((Wizard)player).magicAttack();
 
                 }
-                else if (rand.Next(1, 6) == 5 && player_label.Text[0] == '검')
+                else if (rand.Next(1, 4) == 3 && player_label.Text[0] == '검')
                 {
                     userattack = ((Warrior)player).swordAttack();
                 }
@@ -69,13 +69,25 @@ namespace example_241231
                 player_strength.Text = (player.damage(monsterattack)).ToString();
                 monster_attack_label.Text = monsterattack.ToString();
             }
-            else if (int.Parse(player_strength.Text) <= 0)
+            else if (int.Parse(player_strength.Text) < int.Parse(monster_strength_label.Text))
             {
                 MessageBox.Show("플레이어가 죽었습니다ㅠㅠ");
+                player = new Warrior();
+                player_label.Text = player.showName();
+                player_strength.Text = player.showstrength();
+                
+                monster = new Orc();
+                monster_strength_label.Text = monster.showstrength();
+
             }
             else
             {
                 MessageBox.Show("몬스터가 죽었습니다!");
+                monster = new Slime();
+                player = new Warrior();
+                player_label.Text = player.showName();
+                player_strength.Text = player.showstrength();
+                monster_strength_label.Text = monster.showstrength();
             }
                 
             

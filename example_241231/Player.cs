@@ -25,10 +25,7 @@ namespace example_241231
         int catchOrc = 0;
         int catchSlime = 0;
 
-        public Player()
-        {
-            MessageBox.Show("게임을 시작합니다~");
-        }
+        public Player() { }
         public Player(string name) : this()
         {
             this.name = name;
