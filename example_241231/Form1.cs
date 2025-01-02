@@ -82,7 +82,8 @@ namespace example_241231
             }
             else
             {
-                MessageBox.Show("몬스터가 죽었습니다!");
+                //오버라이드 Talk()
+                monster.Talk();
                 monster = new Slime();
                 monster_label.Text = "슬라임";
                 monster_strength_label.Text = monster.showstrength();
@@ -92,10 +93,44 @@ namespace example_241231
                 player_strength.Text = player.showstrength();
                 
             }
-                
-            
-
-
         }
+        #region 오버로드 실습
+        private void change_button_Click(object sender, EventArgs e)
+        {
+            if (name_change_box.Text=="" && strength_change_box.Text == "")
+            {
+                MessageBox.Show("아무것도 입력된 것이 없습니다,,");
+            }
+            else if (name_change_box.Text != "" && strength_change_box.Text == "")
+            {
+                player_label.Text = player.Change(name_change_box.Text);
+            }
+            else if (strength_change_box.Text != "" && name_change_box.Text == "")
+            {
+                if (int.TryParse(strength_change_box.Text, out int hp))
+                {
+                    player_strength.Text = player.Change(hp).ToString();
+                }
+                else
+                {
+                    MessageBox.Show("숫자를 입력해주세요!");
+                }
+            }
+            else
+            {
+                if (int.TryParse(strength_change_box.Text, out int hp))
+                {
+                    string[] result = new string[2];
+                    result = player.Change(name_change_box.Text, hp);
+                    player_label.Text = result[0];
+                    player_strength.Text = result[1];
+                }
+                else
+                {
+                    MessageBox.Show("체력은 숫자로 입력해주세요!");
+                }     
+            }
+        }
+        #endregion
     }
 }

@@ -46,6 +46,28 @@ namespace example_241231
             missioncount[1] = mission.Substring(-3, 1);
             return missioncount;
         }
+
+        #region 오버로드 실습
+        public string Change(string name)
+        {
+            this.name = name;
+            return this.name;
+        }
+        public int Change(int strength)
+        {
+            this.strength = strength;
+            return this.strength;
+        }
+        public string[] Change(string name, int strength)
+        {
+            this.name = name;
+            this.strength = strength;
+            string[] result = new string[2];
+            result[0] = this.name;
+            result[1] = this.strength.ToString();
+            return result;
+        }
+        #endregion
         //form에 띄우기 용
         public string showName() { return this.name; }
         public string showstrength() { return (this.strength).ToString(); }
