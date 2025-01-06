@@ -39,27 +39,28 @@ namespace example_250106
             this.worker.ProgressChanged += new ProgressChangedEventHandler(Worker_ProgressChanged);
             // ReportProgress()가 100을 호출되면 마지막에 한 번 실행되는 메소드
             this.worker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(Worker_Complete);
-
-            void Worker_Dowork(object sender, DoWorkEventArgs e)
-            {
-                for (int i = 0; i <= 100; i++)
-                {
-                    Thread.Sleep(150);
-                    this.worker.ReportProgress(i);
-                }
-            }
-            void Worker_ProgressChanged(object sender, ProgressChangedEventArgs e)
-            {
-                //progresspercentage는 0~100 사아의 값을 가짐
-                progressBar1.Value = e.ProgressPercentage;
-            }
-            void Worker_Complete(object sender, EventArgs e)
-            {
-                MessageBox.Show("완료!");
-            }
             #endregion
-
         }
+
+        #region BackgroundWorker 실습
+        void Worker_Dowork(object sender, DoWorkEventArgs e)
+        {
+            for (int i = 0; i <= 100; i++)
+            {
+                Thread.Sleep(150);
+                this.worker.ReportProgress(i);
+            }
+        }
+        void Worker_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            //progresspercentage는 0~100 사아의 값을 가짐
+            progressBar1.Value = e.ProgressPercentage;
+        }
+        void Worker_Complete(object sender, EventArgs e)
+        {
+            MessageBox.Show("완료!");
+        }
+        #endregion
 
         private void startbutton_Click(object sender, EventArgs e)
         {
