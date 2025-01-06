@@ -35,6 +35,7 @@ namespace example_250106
             for (int i = 0; i < files.Length; i++)
             {
                 this.worker.ReportProgress(i);
+                Thread.Sleep(100);
             }
         }
         void result(object sender, ProgressChangedEventArgs e)
