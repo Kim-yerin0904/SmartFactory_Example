@@ -47,7 +47,7 @@ namespace example_250106
         {
             MessageBox.Show("검색 완료!");
         }
-
+        
         private void input_button_Click(object sender, EventArgs e)
         {
             if (!this.worker.IsBusy)
