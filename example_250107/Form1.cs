@@ -70,7 +70,7 @@ namespace example_250107
             
             for (int i = 0; i < 5; i++)
             {
-                int idx = i;
+                int idx = i;  // i의 값이 스레드 때문에 0,1,2,3,4 이렇게 안들어 올 수 있음 그래서 idx에 저장해서 i 값이 변해도 괜찮음!
                 thread[idx] = new Thread(() => move(idx));
                 thread[idx].Start();
             }
