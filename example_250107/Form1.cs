@@ -33,10 +33,8 @@ namespace example_250107
             }            
             #endregion
         }
-
         void move(int i)
         {
-
             Stopwatch sw = new Stopwatch();            
             sw.Start();
             int distance = 0;
@@ -62,19 +60,15 @@ namespace example_250107
             {
                 textBox1.Text += $"{i+1}번 선수 완주~! 걸린 시간:{sw.ElapsedMilliseconds}\r\n";
             }
-            
-
         }
         private void start_button_Click(object sender, EventArgs e)
         {
-            
             for (int i = 0; i < 5; i++)
             {
                 int idx = i;  // i의 값이 스레드 때문에 0,1,2,3,4 이렇게 안들어 올 수 있음 그래서 idx에 저장해서 i 값이 변해도 괜찮음!
                 thread[idx] = new Thread(() => move(idx));
                 thread[idx].Start();
             }
-
         }
     }
 }
