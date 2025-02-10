@@ -8,6 +8,23 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <TextBox x:Name="textbox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="10"></TextBox>
-        <Image x:Name="imageBox" HorizontalAlignment="Left" VerticalAlignment="Top" Height="300" Width="300" Margin="10,50,0,0"></Image>
+        <Label Content="원본" Margin="10,24,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Image x:Name="imageBox" HorizontalAlignment="Left" VerticalAlignment="Top" Height="200" Width="300" Margin="10,50,0,0"></Image>
+        
+        <Label Content="BRG2GRAY" HorizontalAlignment="Left" VerticalAlignment="Top" Height="150" Width="200" Margin="320,24,0,0"/>
+        <Image x:Name="imageBox1" HorizontalAlignment="Left" VerticalAlignment="Top" Height="150" Width="200" Margin="320,50,0,0"></Image>
+
+        <Label Content="BGR2HSV" HorizontalAlignment="Right" VerticalAlignment="Top" Height="150" Width="200" Margin="0,24,20,0"/>
+        <Image x:Name="imageBox2" HorizontalAlignment="Right" VerticalAlignment="Top" Height="150" Width="200" Margin="0,50,20,0"></Image>
+
+        <Label Content="BGR2HLS" HorizontalAlignment="Left" VerticalAlignment="Top" Height="150" Width="200" Margin="50,235,0,0"/>
+        <Image x:Name="imageBox3" HorizontalAlignment="Left" VerticalAlignment="Top" Height="150" Width="200" Margin="50,260,0,0"></Image>
+
+        <Label Content="BGR2RGBA" HorizontalAlignment="Left" VerticalAlignment="Top" Height="150" Width="200" Margin="320,235,0,0"/>
+        <Image x:Name="imageBox4" HorizontalAlignment="Left" VerticalAlignment="Top" Height="150" Width="200" Margin="320,260,0,0"></Image>
+
+        <Label Content="BGR2Lab" HorizontalAlignment="Right" VerticalAlignment="Top" Height="150" Width="200" Margin="0,235,20,0"/>
+        <Image x:Name="imageBox5" HorizontalAlignment="Right" VerticalAlignment="Top" Height="150" Width="200" Margin="0,260,20,0"></Image>
+
     </Grid>
 </Window>
