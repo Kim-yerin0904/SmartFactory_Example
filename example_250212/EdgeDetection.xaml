@@ -1,0 +1,36 @@
+﻿<Window x:Class="example_250212.EdgeDetection"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:example_250212"
+        mc:Ignorable="d"
+        Title="EdgeDetection" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Label Content="원본" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="0" Grid.Column="0"></Label>
+        <Image x:Name="originalBox" Grid.Row="0" Grid.Column="0"></Image>
+
+        <Label Content="sobel" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="0" Grid.Column="1"></Label>
+        <Image x:Name="sobelBox" Grid.Row="0" Grid.Column="1"></Image>
+        
+        <Label Content="scharr" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="0" Grid.Column="2"></Label>
+        <Image x:Name="scharrBox" Grid.Row="0" Grid.Column="2"></Image>
+
+        <Label Content="laplacian" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1"></Label>
+        <Image x:Name="laplacianBox" Grid.Row="1" Grid.Column="1"></Image>
+
+        <Label Content="canny" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Grid.Column="2"></Label>
+        <Image x:Name="cannyBox" Grid.Row="1" Grid.Column="2"></Image>
+
+    </Grid>
+</Window>
